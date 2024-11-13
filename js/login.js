@@ -35,27 +35,25 @@ window.addEventListener('load', function() {
     // Função para adicionar animação
     const animateElement = (element, delay) => {
         setTimeout(() => {
-            element.style.opacity = '1';               // Torna visível
-            element.style.transform = 'translateY(0)'; // Restaura a posição original
-        }, delay);  // Atraso de acordo com o tempo especificado
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }, delay);
     };
 
     // Animação do login container
     animateElement(loginContainer, 0);
 
     // Animação do título
-    animateElement(title, 300);  // Atraso de 0.3s
+    animateElement(title, 300);
 
     // Animação dos campos de entrada
     inputGroups.forEach((inputGroup, index) => {
-        animateElement(inputGroup, 600 + (index * 100));  // Atraso sequencial
+        animateElement(inputGroup, 600 + (index * 100));
     });
 
     // Animação do botão
-    animateElement(button, 900);  // Atraso de 0.9s
+    animateElement(button, 900);
 
     // Animação do link de registro
-    animateElement(registerLink, 1200); // Atraso de 1.2s
+    animateElement(registerLink, 1200);
 });
-
-

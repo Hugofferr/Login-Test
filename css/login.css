@@ -8,10 +8,10 @@
 
 /* Corpo e fundo */
 body {
-    background-image: url('/png/background-photo-1699.jpg'); /* Caminho para a imagem PNG */
-    background-size: cover; /* Faz a imagem cobrir toda a tela */
-    background-position: center; /* Centraliza a imagem */
-    background-attachment: fixed; /* Fixa a imagem para que ela não se mova durante o scroll */
+    background-image: url('/png/background-photo-1699.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,8 @@ body {
 
 /* Contêiner principal com efeito de vidro */
 .login-container {
-    background: rgba(0, 0, 0, 0.5); /* Cor preta com transparência */
-    backdrop-filter: blur(10px); /* Desfoque do fundo */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -30,7 +30,7 @@ body {
     height: 100%;
     max-height: 400px;
     max-width: 350px;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda suave */
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Título do formulário */
@@ -48,28 +48,26 @@ h2 {
 
 .input-group label {
     font-size: 14px;
-    color: #D3D3D3; /* Cor mais clara para os textos */
+    color: #D3D3D3;
     display: block;
     margin-bottom: 5px;
 }
 
-/* Campo de entrada */
 .input-group input {
     width: 100%;
     padding: 12px;
-    padding-bottom: 8px; /* Ajuste para dar espaço à borda inferior */
-    border: none; /* Remover borda geral */
-    border-bottom: 2px solid #ccc; /* Borda inferior cinza */
+    padding-bottom: 8px;
+    border: none;
+    border-bottom: 2px solid #ccc;
     font-size: 16px;
-    color: #D3D3D3; /* Texto mais claro */
+    color: #D3D3D3;
     background: transparent;
-    transition: border-color 0.3s ease, color 0.3s ease; /* Suaviza a transição da cor da borda e do texto */
+    transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-/* Foco no campo de entrada */
 .input-group input:focus {
-    border-bottom: 2px solid green; /* Borda inferior verde */
-    color: #fff; /* Texto branco quando o campo é focado */
+    border-bottom: 2px solid green;
+    color: #fff;
     outline: none;
 }
 
@@ -84,20 +82,9 @@ h2 {
     right: 12px;
     top: 12px;
     cursor: pointer;
-    width: 24px; 
-    height: 24px; 
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave para movimento e opacidade */
-}
-
-/* Estilo do ícone de olho + Animação suave para o ícone de olho*/
-.toggle-password {
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    cursor: pointer;
-    width: 22px;  /* Tamanho da imagem */
-    height: 22px; /* Tamanho da imagem */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave para movimento e opacidade */
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Botão de login */
@@ -125,19 +112,18 @@ button:hover {
     font-size: 15px;
     margin-top: 10px;
     padding: 20px;
-    color: #D3D3D3; /* Cor mais clara */
+    color: #D3D3D3;
 }
 
 .register-link a {  
-    text-decoration: none; /* Remove o sublinhado */
-    color: #4A90E2;        /* Cor do link (ajustar se necessário) */
-    font-weight:bolder;     /* Deixa o texto mais destacado */
+    text-decoration: none;
+    color: #4A90E2;
+    font-weight: bolder;
 }
 
 .register-link a:hover {
-    color: white; 
+    color: white;
 }
-
 
 /* Mensagens de erro */
 .error-message {
@@ -150,12 +136,11 @@ button:hover {
     font-size: 18px;
 }
 
-
 /* Inicialmente, escondemos e deslocamos os elementos */
 .login-container, h2, .input-group, button, .register-link {
     opacity: 0;
-    transform: translateY(30px); /* Desloca para baixo */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transição suave */
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* Responsividade */
