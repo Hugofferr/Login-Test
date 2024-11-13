@@ -27,7 +27,9 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
-    max-width: 400px;
+    height: 100%;
+    max-height: 400px;
+    max-width: 350px;
     border: 1px solid rgba(255, 255, 255, 0.2); /* Borda suave */
 }
 
@@ -102,6 +104,7 @@ h2 {
 button {
     width: 100%;
     padding: 12px;
+    margin-top: 20px;
     background-color: #4A90E2;
     color: white;
     border: none;
@@ -120,11 +123,12 @@ button:hover {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 10px;
+    padding: 20px;
     color: #D3D3D3; /* Cor mais clara */
 }
 
-.register-link a {
+.register-link a {  
     text-decoration: none; /* Remove o sublinhado */
     color: #4A90E2;        /* Cor do link (ajustar se necessário) */
     font-weight:bolder;     /* Deixa o texto mais destacado */
