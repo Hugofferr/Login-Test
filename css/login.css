@@ -1,0 +1,167 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corpo e fundo */
+body {
+    background-image: url('/png/background-photo-1699.jpg'); /* Caminho para a imagem PNG */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Fixa a imagem para que ela não se mova durante o scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Contêiner principal com efeito de vidro */
+.login-container {
+    background: rgba(0, 0, 0, 0.5); /* Cor preta com transparência */
+    backdrop-filter: blur(10px); /* Desfoque do fundo */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda suave */
+}
+
+/* Título do formulário */
+h2 {
+    text-align: center;
+    color: #4A90E2;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos campos de entrada */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #D3D3D3; /* Cor mais clara para os textos */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Campo de entrada */
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    padding-bottom: 8px; /* Ajuste para dar espaço à borda inferior */
+    border: none; /* Remover borda geral */
+    border-bottom: 2px solid #ccc; /* Borda inferior cinza */
+    font-size: 16px;
+    color: #D3D3D3; /* Texto mais claro */
+    background: transparent;
+    transition: border-color 0.3s ease, color 0.3s ease; /* Suaviza a transição da cor da borda e do texto */
+}
+
+/* Foco no campo de entrada */
+.input-group input:focus {
+    border-bottom: 2px solid green; /* Borda inferior verde */
+    color: #fff; /* Texto branco quando o campo é focado */
+    outline: none;
+}
+
+/* Container do campo de senha */
+.password-container {
+    position: relative;
+}
+
+/* Animação de movimento e transição de opacidade para o ícone de olho */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+    width: 24px; 
+    height: 24px; 
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave para movimento e opacidade */
+}
+
+/* Estilo do ícone de olho + Animação suave para o ícone de olho*/
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+    width: 22px;  /* Tamanho da imagem */
+    height: 22px; /* Tamanho da imagem */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transição suave para movimento e opacidade */
+}
+
+/* Botão de login */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Link de "Registrar" */
+.register-link {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+    color: #D3D3D3; /* Cor mais clara */
+}
+
+.register-link a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #4A90E2;        /* Cor do link (ajustar se necessário) */
+    font-weight:bolder;     /* Deixa o texto mais destacado */
+}
+
+.register-link a:hover {
+    color: white; 
+}
+
+
+/* Mensagens de erro */
+.error-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.error-message h1 {
+    color: #e74c3c;
+    font-size: 18px;
+}
+
+
+/* Inicialmente, escondemos e deslocamos os elementos */
+.login-container, h2, .input-group, button, .register-link {
+    opacity: 0;
+    transform: translateY(30px); /* Desloca para baixo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transição suave */
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
