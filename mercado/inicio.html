@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Exemplo</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">LOGO</div>
+        <nav class="menu">
+            <a href="#">Cadastro de Produto</a>
+            <a href="#">Cadastro de Usuário</a>
+            <a href="#">Vendas</a>
+            <a href="#">Relatório</a>
+            <a href="#">Sair</a>
+        </nav>
+    </header>
+
+    <div class="conteudo">
+        <main class="conteudo-principal">
+            <!-- Painel Esquerdo -->
+            <section class="painel-esquerdo">
+                <div class="caixa2">
+                    <h2>Lista de Produtos</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Produto</th>
+                                <th>Valor</th>
+                                <th>Quantidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Produto A</td>
+                                <td>R$ 25,00</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Produto B</td>
+                                <td>R$ 30,00</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>Produto C</td>
+                                <td>R$ 45,00</td>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Painel Direito -->
+            <section class="painel-direito">
+                <div class="caixa logo-area">
+                    <h2>Logo</h2>
+                    <div class="logo-maior">LOGO</div>
+                </div>
+
+                <div class="caixa1">
+                    <label for="codigo">Código do Produto</label>
+                    <input type="text" id="codigo" placeholder="Digite o código do produto">
+
+                    <label for="qtde">Quantidade</label>
+                    <input type="number" id="qtde" placeholder="Quantidade">
+
+                    <label for="valor">Valor Unitário</label>
+                    <input type="text" id="valor" placeholder="Valor do produto">
+
+                    <label for="subtotal">Subtotal</label>
+                    <input type="text" id="subtotal" disabled>
+
+                    <p class="total">Total: <span class="valor-total">R$ 0,00</span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="rodape">
+        <p>&copy; 2024 Sistema Exemplo</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,213 @@
+/* Reset de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+    overflow: hidden; /* Impede o uso do scroll na página */
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.cabecalho .logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.cabecalho .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cabecalho .menu a:hover {
+    background-color: #555;
+}
+
+/* Conteúdo */
+.conteudo {
+    flex-grow: 1;
+    margin-top: 20px; /* Para dar espaço para o cabeçalho fixo */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    display: flex;
+    gap: 30px;
+    max-width: 1500px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Espaçamento após o cabeçalho */
+    padding: 20px;
+    height: auto; /* Ajusta a altura automaticamente */
+    box-sizing: border-box; /* Garante que o padding e as bordas não afetem a largura */
+    overflow: visible; /* Remove qualquer tipo de overflow */
+}
+
+/* Painel Esquerdo */
+.painel-esquerdo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 3;
+    min-width: 60px; /* Garante que o painel não encolha demais */
+    height: auto; /* Ajuste para o conteúdo */
+    max-height: calc(100vh - 160px); /* Garante que o painel não ultrapasse a altura da tela */
+}
+
+/* Painel Direito */
+.painel-direito {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    height: auto;
+    max-height: calc(100vh - 160px); /* Impede que o painel ultrapasse a altura da tela */
+    overflow: hidden; /* Garante que qualquer conteúdo extra não seja exibido */
+    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos na largura/altura */
+}
+
+/* Caixa dentro do painel direito */
+.painel-direito .caixa1,
+.painel-direito .caixa2 {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que a caixa não ultrapasse os limites do painel */
+    box-sizing: border-box; /* Evita que padding cause overflow */
+}
+
+/* Caixa de conteúdo */
+.caixa1,
+.caixa2 {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.caixa1 h2,
+.caixa2 h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.caixa1 p,
+.caixa2 p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilo da área do logo */
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Altura da área do logo */
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.logo-maior {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo dos campos */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Corrigido para um valor válido */
+    font-size: 15px;
+}
+
+/* Estilo do valor total */
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.valor-total {
+    background-color: #f0f0f0;
+    font-size: 20px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .conteudo-principal {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cabecalho .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cabecalho .menu a {
+        padding: 8px;
+    }
+
+    .painel-esquerdo, .painel-direito {
+        width: 100%;
+        min-width: 100%;
+        margin-top: 20px;
+    }
+}
