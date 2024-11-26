@@ -162,6 +162,7 @@ button {
     margin-bottom: 20px;
     font-size: 20px;
     color: #333;
+    text-align: center; /* Centraliza o título da tabela */
 }
 
 table {
@@ -171,7 +172,8 @@ table {
 
 th, td {
     padding: 12px;
-    text-align: left;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    vertical-align: middle; /* Centraliza o texto verticalmente */
     border-bottom: 1px solid #ddd;
 }
 
