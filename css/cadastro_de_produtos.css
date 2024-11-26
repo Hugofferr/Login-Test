@@ -1,0 +1,221 @@
+/* Reset de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.cabecalho .logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.cabecalho .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cabecalho .menu a:hover {
+    background-color: #555;
+}
+
+/* Conteúdo principal em row */
+.conteudo {
+    flex-grow: 1;
+    margin-top: 80px; /* Para compensar o cabeçalho fixo */
+    display: flex;
+    flex-direction: row; /* Linha horizontal */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Formulário */
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    flex: 1;
+}
+
+.formulario h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+.formulario label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Botões em colunas */
+.botoes-base {
+    display: flex;
+    flex-direction: column; /* Botões em coluna */
+    align-items: stretch; /* Botões ocupam 100% da largura disponível */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn {
+    color: white;
+    font-weight: bold;
+}
+
+.btn.cadastrar {
+    background-color: #28a745;
+}
+
+.btn.cadastrar:hover {
+    background-color: #218838;
+}
+
+.btn.deletar {
+    background-color: #dc3545;
+}
+
+.btn.deletar:hover {
+    background-color: #c82333;
+}
+
+.btn.listar {
+    background-color: #007bff;
+}
+
+.btn.listar:hover {
+    background-color: #0056b3;
+}
+
+.btn.alterar {
+    background-color: #ffc107;
+}
+
+.btn.alterar:hover {
+    background-color: #e0a800;
+}
+
+/* Tabela */
+.tabela {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    flex: 2;
+}
+
+.tabela h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+td {
+    color: #555;
+}
+
+table .btn-remover {
+    background-color: #dc3545;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+table .btn-remover:hover {
+    background-color: #c82333;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .conteudo {
+        flex-direction: column; /* Empilha as divs em telas menores */
+    }
+
+    .formulario, .tabela {
+        width: 100%;
+    }
+}

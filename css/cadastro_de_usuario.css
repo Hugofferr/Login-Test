@@ -1,0 +1,147 @@
+/* Reset de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.cabecalho .logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.cabecalho .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cabecalho .menu a:hover {
+    background-color: #555;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Conteúdo */
+.conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    width: 100%;
+    position: relative;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+/* Caixa de Formulário */
+.form-container, .pesquisa-container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px); /* Posição inicial escondida */
+}
+
+.form-container.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pesquisa-container.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botões */
+.botao-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-cadastrar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-pesquisar {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-cadastrar:hover {
+    background-color: #45a049;
+}
+
+.btn-pesquisar:hover {
+    background-color: #1976D2;
+}
+
+@media (max-width: 768px) {
+    .conteudo-principal {
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cadastro_de_produtos.css">
+    <title>Cadastro de Produto</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <div class="logo">LOGO</div>
+        <nav class="menu">
+            <a href="#">Cadastro de Produto</a>
+            <a href="#">Cadastro de Usuário</a>
+            <a href="#">Vendas</a>
+            <a href="#">Relatório</a>
+            <a href="#">Sair</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo">
+        <section class="formulario">
+            <h2>Cadastro de Produto</h2>
+            <form action="/php/crud.php" method="POST">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" placeholder="Digite o código do produto">
+        
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" name="descricao" placeholder="Digite a descrição do produto">
+        
+                <label for="produto-preco">Preço (R$):</label>
+                <input type="number" id="produto-preco" name="preco" step="0.01" placeholder="Digite o preço">
+        
+                <label for="produto-quantidade">Quantidade em Estoque:</label>
+                <input type="number" id="produto-quantidade" name="quantidade" placeholder="Digite a quantidade">
+            </form>
+        </section>
+
+        <!-- Botões entre formulário e tabela -->
+        <div class="botoes-base">
+            <button type="submit" name="Inserir" class="btn cadastrar">Cadastrar</button>
+            <button type="submit" name="Deletar" class="btn deletar">Deletar</button>
+            <button type="submit" name="Listar" class="btn listar">Listar</button>
+            <button type="submit" name="Alterar" class="btn alterar">Alterar</button>
+        </div>
+
+        <!-- Tabela de Produtos -->
+        <section class="tabela">
+            <h2>Produtos Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de dados -->
+                    <tr>
+                        <td>001</td>
+                        <td>Produto A</td>
+                        <td>R$ 25,00</td>
+                        <td>10</td>
+                        <td>
+                            <button class="btn-remover">Remover</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p>&copy; 2024 Sistema Exemplo</p>
+    </footer>
+</body>
+</html>

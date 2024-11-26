@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro de Usuário</title>
+    <link rel="stylesheet" href="/css/cadastro_de_usuario.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">LOGO</div>
+        <nav class="menu">
+            <a href="javascript:void(0);" onclick="showCadastro()">Cadastro</a>
+            <a href="javascript:void(0);" onclick="showPesquisa()">Pesquisar</a>
+        </nav>
+    </header>
+
+    <div class="conteudo">
+        <main class="conteudo-principal">
+            <!-- Formulário de Cadastro -->
+            <div class="form-container active">
+                <h2>Cadastro de Usuário</h2>
+                <form>
+                    <div class="input-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" placeholder="Digite o nome">
+                    </div>
+                    <div class="input-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" placeholder="Digite a senha">
+                    </div>
+                    <div class="input-group">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="data-nascimento">Data de Nascimento:</label>
+                        <input type="date" id="data-nascimento">
+                    </div>
+                    <div class="input-group">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" id="cargo" placeholder="Digite o cargo">
+                    </div>
+                    <div class="botao-container">
+                        <button type="submit" class="btn-cadastrar">Cadastrar</button>
+                        <button type="button" class="btn-pesquisar" onclick="showPesquisa()">Pesquisar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Pesquisa de Usuário -->
+            <div class="pesquisa-container">
+                <h2>Pesquisar Usuário</h2>
+                <input type="text" id="pesquisa" placeholder="Digite o nome do usuário">
+                <div class="botao-container">
+                    <button type="button" class="btn-cadastrar" onclick="editarUsuario()">Editar</button>
+                    <button type="button" class="btn-pesquisar" onclick="excluirUsuario()">Excluir</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="rodape">
+        <p>&copy; 2024 Sistema Exemplo</p>
+    </footer>
+
+    <script src="js/cadastro_de_usuario.js"></script>
+</body>
+</html>
