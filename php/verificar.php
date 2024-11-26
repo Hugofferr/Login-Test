@@ -21,11 +21,11 @@ $resultado = $comando->execute();
 
     if($achou==1 && $permissao!="A")
     {
-        include("usuario.html");
+        include("inicio.html");
     }
 
     if($achou==0)
     {
-        include("index.html");
+        include("login.html");
     }
 ?>

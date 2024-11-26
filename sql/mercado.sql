@@ -14,19 +14,24 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Copiando estrutura do banco de dados para mercado
+CREATE DATABASE IF NOT EXISTS `mercado` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `mercado`;
+
 -- Copiando estrutura para tabela mercado.produto
 CREATE TABLE IF NOT EXISTS `produto` (
-  `id_prod` int(11) NOT NULL AUTO_INCREMENT,
+  `id_prod` int(20) NOT NULL,
   `nome_prod` varchar(50) NOT NULL,
-  `preco_prod` decimal(5,2) NOT NULL DEFAULT 0.00,
+  `preco_prod` decimal(5,2) DEFAULT 0.00,
   `estoque_prod` int(10) DEFAULT 0,
   `unid_medida` varchar(5) DEFAULT NULL,
   `desconto` int(10) DEFAULT NULL,
   `validade` date DEFAULT NULL,
   PRIMARY KEY (`id_prod`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela mercado.produto: ~0 rows (aproximadamente)
 
 -- Copiando estrutura para tabela mercado.usuario
 CREATE TABLE IF NOT EXISTS `usuario` (
@@ -39,9 +44,12 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `hrs_trabalhadas` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `cpf` (`cpf`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela mercado.usuario: ~2 rows (aproximadamente)
+INSERT INTO `usuario` (`id`, `nome`, `senha`, `permissao`, `cpf`, `salario_220h`, `hrs_trabalhadas`) VALUES
+	(4, 'Mateus', '123', 'A', NULL, NULL, NULL),
+	(5, 'Katiara', 'abc', 'U', NULL, NULL, NULL);
 
 -- Copiando estrutura para tabela mercado.vendas
 CREATE TABLE IF NOT EXISTS `vendas` (
@@ -55,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `vendas` (
   CONSTRAINT `FK2_produto` FOREIGN KEY (`produtos`) REFERENCES `produto` (`id_prod`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
--- Exportação de dados foi desmarcado.
+-- Copiando dados para a tabela mercado.vendas: ~0 rows (aproximadamente)
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
